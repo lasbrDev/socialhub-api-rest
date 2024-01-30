@@ -1,5 +1,7 @@
 package br.com.lasbr.socialhub.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import br.com.lasbr.socialhub.domain.Post;
@@ -18,5 +20,13 @@ public class PostService {
 	public Post findById(String id) {
 		return repository.findById(id)
 				.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
+	}
+	
+	public List<Post> findByTitle(String text) {
+		return repository.findByTitleContainingIgnoreCase(text);
+	}
+	
+	public List<Post> searchByTitle(String text) {
+		return repository.findByTitle(text);
 	}
 }

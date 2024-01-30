@@ -45,5 +45,3 @@ public class CommentDTO implements Serializable{
 		this.author = author;
 	}
 }
-
-
