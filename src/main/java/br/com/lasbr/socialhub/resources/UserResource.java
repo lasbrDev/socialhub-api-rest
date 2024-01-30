@@ -3,6 +3,7 @@ package br.com.lasbr.socialhub.resources;
 import java.net.URI;
 import java.util.List;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import br.com.lasbr.socialhub.domain.Post;
 import br.com.lasbr.socialhub.domain.User;
 import br.com.lasbr.socialhub.dto.UserDTO;
 import br.com.lasbr.socialhub.services.UserService;
@@ -62,6 +64,12 @@ public class UserResource {
 		user.setId(id);
 		service.update(user);
 		return ResponseEntity.noContent().build();
+	}
+	
+	@GetMapping("/{id}/posts")
+	public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+		User user = service.findById(id);
+		return ResponseEntity.ok().body(user.getPosts());
 	}
 }
 	
