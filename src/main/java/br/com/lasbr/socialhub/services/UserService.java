@@ -12,35 +12,35 @@ import br.com.lasbr.socialhub.services.exception.ObjectNotFoundException;
 @Service
 public class UserService {
 
-	private final UserRepository repositoy;
+	private final UserRepository repository;
 	
 	public UserService(UserRepository repository) {
-		this.repositoy = repository;
+		this.repository = repository;
 	}
 	
 	public List<User> findAll() {
-		return repositoy.findAll();
+		return repository.findAll();
 	}
 	
 	public User findById(String id) {
-		return repositoy.findById(id)
+		return repository.findById(id)
 				.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
 	}
 	
 	public User insert(User obj) {
-		return repositoy.insert(obj);
+		return repository.insert(obj);
 	}
 	
 	public void delete(String id) {
 		findById(id);
-		repositoy.deleteById(id);
+		repository.deleteById(id);
 	}
 	
 	public User update(User obj) {
-		User newUser = repositoy.findById(obj.getId())
+		User newUser = repository.findById(obj.getId())
 				.orElseThrow(() -> new ObjectNotFoundException("User not found"));
 		updateData(newUser, obj);
-		return repositoy.save(newUser);
+		return repository.save(newUser);
 	}
 	
 	private void updateData(User newUser, User obj) {
