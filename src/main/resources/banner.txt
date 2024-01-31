@@ -7,7 +7,6 @@
 .-._)   \ \ |  | |  | ||  |`-'|,|  |_.'  |  .-.  (|  '---.' |  .-.  ||  | | `-' / |  \  | 
 \       /  `'  '-'  '(_'  '--'(_|  |     |  | |  ||      |  |  | |  ('  '-'(_.-'| '--'  / 
  `-----'     `-----'    `-----' `--'     `--' `--'`------'  `--' `--' `-----'   `------'  
-
- ${application.title} ${application.version}
+${application.title} ${application.version}
 Powered by Spring Boot ${spring-boot.version}
 Made with 💙 by lasbrDev (◕‿◕) - ♱ https://www.github.com/lasbrDev ♱
