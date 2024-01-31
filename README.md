@@ -30,6 +30,7 @@ O projeto está dividido em pacotes, cada um responsável por uma parte específ
 
 ### Posts:
 
+<<<<<<< HEAD
 - **`GET /posts/{id}`**: Obtém um post pelo ID.
 
 - **`GET /posts/titlesearch?text={text}`**: Busca posts pelo título.
@@ -49,6 +50,27 @@ O projeto está dividido em pacotes, cada um responsável por uma parte específ
 - **`PUT /users/{id}`**: Atualiza informações de um usuário pelo ID.
 
 - **`GET /users/{id}/posts`**: Lista de posts de um usuário.
+=======
+- `GET /posts/{id}:` Obtém um post pelo ID.
+
+- `GET /posts/titlesearch?text={text}:` Busca posts pelo título.
+
+- `GET /posts/fullsearch?text={text}&minDate={minDate}&maxDate={maxDate}:` Busca completa considerando texto, data mínima e máxima.
+
+### Usuários:
+
+- `GET /users:` Lista de todos os usuários.
+
+- `GET /users/{id}:` Obtém um usuário pelo ID.
+
+- `POST /users:` Cria um novo usuário.
+
+- `DELETE /users/{id}:` Exclui um usuário pelo ID.
+
+- `PUT /users/{id}:` Atualiza informações de um usuário pelo ID.
+
+- `GET /users/{id}/posts:` Lista de posts de um usuário.
+>>>>>>> main
 
 ## Exceções Personalizadas
 
@@ -62,6 +84,7 @@ A seguir estão algumas funcionalidades adicionais que serão implementadas para
 ### Para Posts:
 
 - **Curtir um Post:**
+<<<<<<< HEAD
   - **`POST /posts/{id}/like`**: Adiciona uma curtida a um post específico.
 
 - **Compartilhar um Post:**
@@ -72,10 +95,27 @@ A seguir estão algumas funcionalidades adicionais que serão implementadas para
 
 - **Desfazer Curtida em um Post:**
   - **`DELETE /posts/{id}/like`**: Remove a curtida de um post específico.
+=======
+
+  - `POST /posts/{id}/like:` Adiciona uma curtida a um post específico.
+
+- **Compartilhar um Post:**
+
+  - `POST /posts/{id}/share:` Compartilha um post específico.
+
+- **Apagar um Comentário:**
+
+  - `DELETE /posts/{postId}/comments/{commentId}:` Remove um comentário de um post.
+
+- **Desfazer Curtida em um Post:**
+
+  - `DELETE /posts/{id}/like:` Remove a curtida de um post específico.
+>>>>>>> main
 
 ### Para Usuários:
 
 - **Adicionar Foto ao Perfil:**
+<<<<<<< HEAD
   - **`POST /users/{id}/photo`**: Adiciona uma foto ao perfil do usuário.
 
 - **Atualizar Data de Aniversário:**
@@ -83,10 +123,27 @@ A seguir estão algumas funcionalidades adicionais que serão implementadas para
 
 - **Atualizar Descrição do Perfil:**
   - **`PUT /users/{id}/description`**: Atualiza a descrição do perfil do usuário.
+=======
+
+  - `POST /users:` Adiciona uma foto ao perfil do usuário.
+
+- **Adicionar Data de Aniversário:**
+
+  - `POST /users:` Adiciona a data de aniversário do usuário.
+
+- **Adicionar Descrição do Perfil:**
+
+  - `POST /users:` Adiciona a descrição do perfil do usuário.
+  
+  - **Atualizar Descrição do Perfil:**
+
+  - `PUT /users/{id}/description:` Atualiza a descrição do perfil do usuário.
+>>>>>>> main
 
 ### Outros:
 
 - **Listar Curtidas em um Post:**
+<<<<<<< HEAD
   - **`GET /posts/{id}/likes`**: Obtém a lista de usuários que curtiram um post.
 
 - **Listar Compartilhamentos de um Post:**
@@ -95,6 +152,18 @@ A seguir estão algumas funcionalidades adicionais que serão implementadas para
 - **Listar Comentários de um Post:**
   - **`GET /posts/{id}/comments`**: Obtém a lista de comentários de um post.
 
+=======
+
+  - `GET /posts/{id}/likes:` Obtém a lista de usuários que curtiram um post.
+
+- **Listar Compartilhamentos de um Post:**
+
+  - `GET /posts/{id}/shares:` Obtém a lista de usuários que compartilharam um post.
+
+- **Listar Comentários de um Post:**
+
+  - `GET /posts/{id}/comments:` Obtém a lista de comentários de um post.
+>>>>>>> main
 ---
 
 ## Requisitos
