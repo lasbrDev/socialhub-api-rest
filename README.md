@@ -8,23 +8,23 @@ O SocialHub é uma aplicação que simula uma experiência de interação social
 
 O projeto está dividido em pacotes, cada um responsável por uma parte específica da aplicação.
 
-- **`br.com.lasbr.socialhub`**: Contém a classe principal da aplicação (`SocialhubApplication`), responsável por iniciar a aplicação Spring Boot.
+- `br.com.lasbr.socialhub`: Contém a classe principal da aplicação (`SocialhubApplication`), responsável por iniciar a aplicação Spring Boot.
   
-- **`br.com.lasbr.socialhub.domain`**: Contém as classes que representam o modelo de domínio da aplicação. As principais classes são `User` e `Post`, que representam usuários e posts, respectivamente.
+- `br.com.lasbr.socialhub.domain`: Contém as classes que representam o modelo de domínio da aplicação. As principais classes são `User` e `Post`, que representam usuários e posts, respectivamente.
 
-- **`br.com.lasbr.socialhub.dto`**: Contém classes DTO (Data Transfer Object) que são utilizadas para transferência de dados entre as camadas da aplicação.
+- `br.com.lasbr.socialhub.dto`: Contém classes DTO (Data Transfer Object) que são utilizadas para transferência de dados entre as camadas da aplicação.
 
-- **`br.com.lasbr.socialhub.repositories`**: Contém interfaces de repositório que estendem o `MongoRepository` do Spring Data MongoDB para acesso ao banco de dados.
+- `br.com.lasbr.socialhub.repositories`: Contém interfaces de repositório que estendem o `MongoRepository` do Spring Data MongoDB para acesso ao banco de dados.
 
-- **`br.com.lasbr.socialhub.resources`**: Contém os controladores REST que lidam com as requisições HTTP. `PostResources` trata das operações relacionadas aos posts, enquanto `UserResource` trata das operações relacionadas aos usuários.
+- `br.com.lasbr.socialhub.resources`: Contém os controladores REST que lidam com as requisições HTTP. `PostResources` trata das operações relacionadas aos posts, enquanto `UserResource` trata das operações relacionadas aos usuários.
 
-- **`br.com.lasbr.socialhub.resources.exception`**: Contém classes para tratamento de exceções específicas da aplicação.
+- `br.com.lasbr.socialhub.resources.exception`: Contém classes para tratamento de exceções específicas da aplicação.
 
-- **`br.com.lasbr.socialhub.resources.util`**: Contém classes utilitárias, como `URL`, responsável por decodificar parâmetros de URL, e outras classes úteis.
+- `br.com.lasbr.socialhub.resources.util`: Contém classes utilitárias, como `URL`, responsável por decodificar parâmetros de URL, e outras classes úteis.
 
-- **`br.com.lasbr.socialhub.services`**: Contém as classes de serviço que implementam a lógica de negócio da aplicação. `PostService` e `UserService` realizam operações relacionadas a posts e usuários, respectivamente.
+- `br.com.lasbr.socialhub.services`: Contém as classes de serviço que implementam a lógica de negócio da aplicação. `PostService` e `UserService` realizam operações relacionadas a posts e usuários, respectivamente.
 
-- **`br.com.lasbr.socialhub.services.exception`**: Contém exceções específicas da aplicação.
+- `br.com.lasbr.socialhub.services.exception`: Contém exceções específicas da aplicação.
 
 ## Endpoints
 
