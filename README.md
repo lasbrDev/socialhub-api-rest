@@ -123,7 +123,7 @@ Para executar a aplicação SocialHub, você precisará dos seguintes requisitos
 
 Se preferir, você pode usar Docker para configurar um ambiente MongoDB facilmente. Certifique-se de ter o Docker instalado.
 
-Na pasta resources do projeto (src/main/resources) adicione um arquivo docker-compose.yml na raiz do projeto, com as configurações abaixo:
+Adicione um arquivo docker-compose.yml na raiz do projeto, com as configurações abaixo:
 
 
 ```yml
